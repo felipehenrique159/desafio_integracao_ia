@@ -6,16 +6,16 @@ Esta aplicação realiza análise de sentimento em textos utilizando a API da Hu
 
 ## Instruções para rodar a aplicação com Docker
 
-1. Na pasta api/src do projeto, crie uma cópia do arquivo **.env.example** com o nome **.env** e adicione sua chave da HuggingFace.
+1. Na pasta api do projeto, crie uma cópia do arquivo **.env.example** com o nome **.env** e adicione sua chave da HuggingFace.
 
 2. Execute o comando abaixo para subir o container:
    ```
    docker-compose up --build
    ```
 
-### Usando Node.js (sem Docker) - Aplicar comandos no terminal na pasta api/src
+### Usando Node.js (sem Docker) - Aplicar comandos no terminal na pasta api
 
-1. Na pasta api/src do projeto, crie uma cópia do arquivo **.env.example** com o nome **.env** e adicione sua chave da HuggingFace.
+1. Na pasta api do projeto, crie uma cópia do arquivo **.env.example** com o nome **.env** e adicione sua chave da HuggingFace.
 
 2. Instale as dependências:
    ```
