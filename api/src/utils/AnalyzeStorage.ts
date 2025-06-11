@@ -3,7 +3,7 @@ import path from 'path';
 
 const filePath = path.join(__dirname, '../../lastAnalyze.json');
 
-export function saveLastAnalysis(data: any) {
+export function saveLastAnalyze(data: any) {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
