@@ -5,6 +5,12 @@ dotenv.config();
 export default class HuggingfaceService {
     static async analyzeSentiment(text: string) {
         try {
+            const apiKey = process.env.HUGGINGFACE_API_KEY;
+
+            if (!apiKey) {
+                throw new Error("HUGGINGFACE_API_KEY is not defined in the environment.");
+            }
+
             const response = await axios.post(
                 "https://router.huggingface.co/hf-inference/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english",
                 { inputs: text },
@@ -18,8 +24,7 @@ export default class HuggingfaceService {
             return response.data[0];
         }
         catch (error: any) {
-            console.error(error.response?.data || error.message);
-            return { error: "Error detect sentiment" };
+            throw new Error(error.message);
         }
     }
 }

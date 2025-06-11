@@ -14,8 +14,8 @@ export default class AnalyzeController {
             const textAnalyze = await AnalyzeService.analyzeSentiment(text);
 
             response.status(200).json(textAnalyze);
-        } catch (error) {
-            response.status(500).json({ error: 'Error analyzing text' });
+        } catch (error: any) {
+            response.status(500).json({ error: 'Error analyzing text', details: error.message });
         }
     }
 
@@ -34,8 +34,8 @@ export default class AnalyzeController {
             }
 
             response.json({ isFoundTerm });
-        } catch (error) {
-            response.status(500).json({ error: 'Error searching term' });
+        } catch (error: any) {
+            response.status(500).json({ error: 'Error searching term', details: error.message });
         }
     }
 }

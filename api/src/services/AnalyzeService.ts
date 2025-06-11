@@ -43,8 +43,7 @@ export default class AnalyzeService {
             return result;
         }
         catch (error: any) {
-            console.error(error.response?.data || error.message);
-            return { error: "Error detect sentiment" };
+            throw new Error(error.message);
         }
     }
 
@@ -59,8 +58,7 @@ export default class AnalyzeService {
             return lastAnalyze.words.includes(term);
         }
         catch (error: any) {
-            console.error(error.response?.data || error.message);
-            return { error: "Error search term" };
+            throw new Error(error.message);
         }
     }
 }
