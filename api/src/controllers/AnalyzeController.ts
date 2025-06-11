@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
-import AnalyzeService from '../services/analyzeService';
+import AnalyzeService from '../services/AnalyzeService';
+
+
 export default class AnalyzeController {
     static async analyzeText(request: Request, response: Response) {
         try {

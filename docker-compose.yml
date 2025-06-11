@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  api-analyze-text:
+    build: './api'
+    container_name: api-analyze-text
+    ports:
+      - '3001:3001'
+    networks:
+      - rede
+
+networks:
+  rede:
+    driver: bridge
