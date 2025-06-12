@@ -79,18 +79,24 @@ Lá você pode visualizar todos os endpoints, parâmetros, exemplos de requisiç
 
 ```json
 {
-  "totalWords": 5,
-  "topWords": ["gosto", "muito", "programar", "ótimo", "exercício"],
-  "sentiment": [
-	{
-	   "label": "POSITIVE",
-	   "score": 0.7049223780632019
-	},
-	{
-	   "label": "NEGATIVE",
-	   "score": 0.2950776517391205
-	}
-  ]
+   "totalWords": 12,
+   "topWords": [
+    "eu",
+    "gosto",
+    "muito",
+    "de",
+    "programar,"
+   ],
+   "sentiment": [
+     {
+      "label": "POSITIVE",
+      "score": 0.7193377017974854
+     },
+     {
+      "label": "NEGATIVE",
+      "score": 0.28066226840019226
+     }
+   ]
 }
 ```
 
